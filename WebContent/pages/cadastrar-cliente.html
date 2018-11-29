@@ -3,13 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <title>Cadastro de clientes</title>
+<script type="text/javascript" src="../resources/js/script.js"></script>
+<link rel="stylesheet" type="text/css" href="../resources/css/estilos.css">
 </head>
 <body>
-	<form action="../cadastrarCliente">
-		<input type="text" name="nome">
-		<input type="text" name="email">
-		<input type="text" name="dataNascimento">
-		<input type="submit" value="Gravar">
+	<form action="../cadastrarCliente" method="POST" class="form-style-8">
+	<h2>Cadastro de clientes</h2>
+		<label>
+			<input type="text" name="nome" id="nome" placeholder="Nome do cliente">
+		</label>		
+		<label>
+			<input type="text" name="email" id="email" placeholder="email cliente">
+		</label>
+		<label>
+			<input type="text" name="dataNascimento" id="dataNascimento" placeholder="Data de nascimento">
+		</label>
+		<label >
+			<input name="cep" type="text" id="cep" size="10" max="9" placeholder="cep" onblur="pesquisacep(this.value);">
+		</label>
+		<label>
+			<input name="rua" type="text" id="rua" placeholder="rua">
+		</label>
+		<label>
+			<input name="numero" type="text" id="numero" placeholder="número" size="10">
+		</label>
+		<label>
+			<input name="bairro" type="text" id="bairro" placeholder="bairro">
+		</label>
+		<label>
+			<input type="text" id="cidade" name="cidade" placeholder="cidade">
+		</label>
+		<label>
+			<input type="text" id="uf" name="uf" placeholder="UF" size="3">
+		</label>	
+			<input type="submit" value="Gravar" >
 	</form>
 </body>
 </html>
